@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>Solidus Labs API</title>
+    <link href="images/favicon-308d8b99.ico" rel="icon" type="image/ico" />
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -279,7 +280,7 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-449a167d.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-e033bdd3.js"></script>
 
@@ -288,7 +289,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -296,12 +297,9 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+      <img src="images/logo-03535c59.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -309,282 +307,1110 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#overview" class="toc-h1 toc-link" data-title="Overview">Overview</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#data-requirements" class="toc-h1 toc-link" data-title="Data Requirements">Data Requirements</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#order-data-fields" class="toc-h2 toc-link" data-title="Order Data Fields">Order Data Fields</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
-                  </li>
-                  <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#execution-or-trade-data-fields" class="toc-h2 toc-link" data-title="Execution Or Trade Data Fields">Execution Or Trade Data Fields</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#data-transfer-modes" class="toc-h1 toc-link" data-title="Data Transfer Modes">Data Transfer Modes</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#getting-started" class="toc-h2 toc-link" data-title="Getting Started">Getting Started</a>
+                  </li>
+                  <li>
+                    <a href="#rest-api" class="toc-h2 toc-link" data-title="REST API">REST API</a>
+                  </li>
+                  <li>
+                    <a href="#flat-files" class="toc-h2 toc-link" data-title="Flat Files">Flat Files</a>
+                  </li>
+                  <li>
+                    <a href="#fix-api" class="toc-h2 toc-link" data-title="FIX API">FIX API</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rest-api-2" class="toc-h1 toc-link" data-title="Rest API">Rest API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#exchanges" class="toc-h2 toc-link" data-title="Exchanges">Exchanges</a>
+                  </li>
+                  <li>
+                    <a href="#broker-dealers-market-makers-hedge-funds" class="toc-h2 toc-link" data-title="Broker Dealers, Market Makers, Hedge Funds">Broker Dealers, Market Makers, Hedge Funds</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#flat-files-2" class="toc-h1 toc-link" data-title="Flat Files">Flat Files</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#header-row" class="toc-h2 toc-link" data-title="Header Row">Header Row</a>
+                  </li>
+                  <li>
+                    <a href="#data-tuples" class="toc-h2 toc-link" data-title="Data Tuples">Data Tuples</a>
+                  </li>
+                  <li>
+                    <a href="#how-to-uplaod-files" class="toc-h2 toc-link" data-title="How to uplaod files:">How to uplaod files:</a>
+                  </li>
+                  <li>
+                    <a href="#checking-file-status" class="toc-h2 toc-link" data-title="Checking file status:">Checking file status:</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#fix-4-4" class="toc-h1 toc-link" data-title="FIX 4.4">FIX 4.4</a>
+          </li>
+          <li>
+            <a href="#transaction-monitoring" class="toc-h1 toc-link" data-title="Transaction Monitoring">Transaction Monitoring</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#transactions" class="toc-h2 toc-link" data-title="Transactions">Transactions</a>
+                  </li>
+                  <li>
+                    <a href="#user-profile" class="toc-h2 toc-link" data-title="User Profile">User Profile</a>
+                  </li>
+                  <li>
+                    <a href="#institutional-profile" class="toc-h2 toc-link" data-title="Institutional Profile">Institutional Profile</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#faq" class="toc-h1 toc-link" data-title="FAQ">FAQ</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#data" class="toc-h2 toc-link" data-title="Data">Data</a>
+                  </li>
+                  <li>
+                    <a href="#rest-api-3" class="toc-h2 toc-link" data-title="REST API">REST API</a>
+                  </li>
+                  <li>
+                    <a href="#flat-files-3" class="toc-h2 toc-link" data-title="Flat Files">Flat Files</a>
+                  </li>
+              </ul>
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='#'>Solidus Labs Support</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+        <h1 id='overview'>Overview</h1>
+<p><strong>Solidus was designed to make the lives of digital asset compliance teams easier.</strong></p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>The Solidus Cloud is a crypto-native compliance hub, market surveillance and transaction monitoring solution designed to help compliance teams detect and investigate threats, monitor risk holistically and generate regulatory and internal reports - all in one place.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>The Solidus Cloud ingests and processes client data to detect manipulation patterns, generates alerts then presents all findings in a unified risk monitoring dashboard.  In order to streamline the compliance workflow, Solidus was designed for utmost connectivity and includes simple interfaces  for clients to provide  trading and transaction data.  </p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
+<p>This manual covers specifications for each supported data transfer method in detail, alongside examples, as well as API connectivity guidelines, required data formats and other frequently asked questions. For additional questions or issues not covered, please contact us using the form below.</p>
+<h1 id='data-requirements'>Data Requirements</h1><h2 id='order-data-fields'>Order Data Fields</h2>
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Field names marked with a * are mandatory fields
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
+<th>Field Name</th>
+<th>Type</th>
 <th>Description</th>
+<th>Valid Values</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>*<code>TransactTime</code></td>
+<td><code>timestamp</code></td>
+<td>Time in UTC when the trading instruction (i.e. new order, order cancel etc.) was created in the trading system, or when a fill happened</td>
+<td></td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>*<code>Id</code></td>
+<td><code>String</code></td>
+<td>Order ID assigned by buy-side system is carried as a value of tag 11 in trading messages</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Version</code></td>
+<td><code>int</code></td>
+<td>Version of the order as the state of the order change with different transactions</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Symbol</code></td>
+<td><code>String</code></td>
+<td>Pair name to trade. Ex: BTC/USD</td>
+<td><code>&lt;base/counter&gt;</code></td>
+</tr>
+<tr>
+<td>*<code>Side</code></td>
+<td><code>String</code></td>
+<td>Order ID assigned by buy-side system is carried as a value of tag 11 in trading messages</td>
+<td><code>Buy</code><br> <code>Sell</code></td>
+</tr>
+<tr>
+<td>*<code>OrderQty</code></td>
+<td><code>String</code></td>
+<td>Number of units</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Price</code></td>
+<td><code>String</code></td>
+<td>Price for Limit orders</td>
+<td></td>
+</tr>
+<tr>
+<td><code>PriceType</code></td>
+<td><code>String</code></td>
+<td>Order ID assigned by buy-side system is carried as a value of tag 11 in trading messages</td>
+<td>1 = Percentage (e.g. percent of par) (often called &quot;dollar price&quot; for fixed income)<br> 2 = PerUnit (i.e. per share or contract)<br> 3 = FixedAmount (absolute value)</td>
+</tr>
+<tr>
+<td>*<code>OrdType</code></td>
+<td><code>String</code></td>
+<td>Order Type</td>
+<td><code>Market</code><br> <code>Limit</code><br> <code>Stoploss</code></td>
+</tr>
+<tr>
+<td>*<code>OrdStatus</code></td>
+<td><code>String</code></td>
+<td>Identifies current status of order, note that:<br> 0=Accepted <br> D=New</td>
+<td><code>Accepted</code><br><code>undefined</code><br><code>Filled</code><br><code>DoneForDay</code><br><code>Canceled</code><br><code>Replaced</code><br><code>PendingCancel</code><br><code>Stopped</code><br><code>Rejected</code><br><code>Suspended</code><br><code>PendingNew</code><br><code>Calculated</code><br><code>Expired</code><br><code>PendingReplace</code><br><br><code>New</code><br><code>OrderCancelRequest</code><br><code>OrderReplaceRequest</code></td>
+</tr>
+<tr>
+<td><code>ExVenue</code></td>
+<td><code>String</code></td>
+<td>Venue name which provided the execution</td>
+<td></td>
+</tr>
+<tr>
+<td><code>AvgPx</code></td>
+<td><code>String</code></td>
+<td>Broker calculated average price of all fills/executions on the current order. Will be available on part filled/filled orders</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>CumQty</code></td>
+<td><code>String</code></td>
+<td>Total quantity filled</td>
+<td></td>
+</tr>
+<tr>
+<td><code>LeavesQty</code></td>
+<td><code>String</code></td>
+<td>Remaining, unfilled/uncanceled quantity on the order</td>
+<td></td>
+</tr>
+<tr>
+<td><code>TimeInForce</code></td>
+<td><code>String</code></td>
+<td>Specifies how long the order remains in effect</td>
+<td><code>Day</code><br><code>GoodTillCancel</code><br><code>AtTheOpening</code><br><code>ImmediateOrCancel</code><br><code>FillOrKill</code><br><code>GoodTillCrossing</code><br><code>GoodTillDat</code>e<br><code>AtTheClose</code></td>
+</tr>
+<tr>
+<td><code>ExpireDateTime</code></td>
+<td><code>timestamp</code></td>
+<td>Date of order expiration</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>OrderCapacity</code></td>
+<td><code>String</code></td>
+<td>Designates the capacity of the firm placing the order</td>
+<td><code>Agency</code><br><code>Proprietary</code><br><code>Principal</code></td>
+</tr>
+<tr>
+<td>*<code>Account</code></td>
+<td><code>String</code></td>
+<td>Field used for account mnemonic. Its identification source is mutually agreed between the counterparties</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>ClientId</code></td>
+<td><code>String</code></td>
+<td>Unique identifier of the client/beneficiary of the order. Represented in fix as part of PartyRole <452> and PartyID <448></td>
+<td><code>Client ID</code><Br><code>&lt;Client ID&gt;</code></td>
+</tr>
+<tr>
+<td><code>OriginationFirm</code></td>
+<td><code>String</code></td>
+<td>Buyside trader id associated with Order Origination Firm which originates/submits the order.</td>
+<td>Order Orig. Firm<br><code>&lt;Orig. Firm&gt;</code></td>
+</tr>
+<tr>
+<td>*<code>OriginationTrader</code></td>
+<td><code>String</code></td>
+<td>Buyside firm associated with Order Origination Firm which originates/submits the order.</td>
+<td></td>
+</tr>
+<tr>
+<td><code>DeskId</code></td>
+<td><code>String</code></td>
+<td>Desk Id of the transaction creator</td>
+<td></td>
+</tr>
+<tr>
+<td><code>OrigClOrdID</code></td>
+<td><code>String</code></td>
+<td>Id (such as tag 11) of the previous order (NOT the initial order of the day) as assigned by the institution, used to identify the previous order in cancel and cancel/replace requests</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Text</code></td>
+<td><code>String</code></td>
+<td>Free format text String</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>LastLiquidityInd</code></td>
+<td><code>String</code></td>
+<td>Indicator to identify whether this fill was a result of a liquidity provider providing or liquidity <code>taker taking the liquidity</code></td>
+<td><code>AddedLiquidit</code><br><code>RemovedLiquidity</code><br><code>LiquidityRoutedOut</code></td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<h2 id='execution-or-trade-data-fields'>Execution Or Trade Data Fields</h2>
 <table><thead>
 <tr>
-<th>Parameter</th>
+<th>Field Name</th>
+<th>Type</th>
 <th>Description</th>
+<th>Valid Values</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>*<code>TransactTime</code></td>
+<td><code>timestamp</code></td>
+<td>Time in UTC when the trading system, or when a fill happened</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Id</code></td>
+<td><code>String</code></td>
+<td>Unique identifier of execution message as assigned by sell-side (broker, exchange, ECN)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>Version</code></td>
+<td><code>int</code></td>
+<td>Version of the order as the state of the order change with different transactions</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>OrderID</code></td>
+<td><code>String</code></td>
+<td>Order Id associated with the execution/trade</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>MatchingOrderID</code></td>
+<td><code>String</code></td>
+<td>Order ID of the contra/opposite side order that matched with the order in focus</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>MatchingOrderIDVersion</code></td>
+<td><code>String</code></td>
+<td>Version of the MatchingOrder associated with the MatchingOrder Execution</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Quantity</code></td>
+<td><code>String</code></td>
+<td>Quantity executed/filled</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Price</code></td>
+<td><code>String</code></td>
+<td>Execution price</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Status</code></td>
+<td><code>String</code></td>
+<td>Identifies current status of execution</td>
+<td><code>Accepted</code> <br><code>Canceled</code></td>
+</tr>
+<tr>
+<td><code>LastMkt</code></td>
+<td><code>String</code></td>
+<td>Venue name which provided the execution</td>
+<td></td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='data-transfer-modes'>Data Transfer Modes</h1><h3 id='getting-started'>Getting Started</h3>
+<p>Solidus Labs supports two alerting modes to support client requirements: Batch and Real Time alerting. Data integration implementation depends on the alerting mode chosen by the client. Solidus Labs systems support data integration via REST API or Flat Files. REST API is typically chosen for real time alerting mode while flat files integration is implemented for batch alerting mode.</p>
+<h3 id='rest-api'>REST API</h3>
+<p>REST API us used when alerting requirements are real time or near real time.
+Data is sent to Solidus Labs systems via an API call as the events happen on client side.
+Solidus Labs API interface listens for the incoming data, processes it to generate alerts for the Dashboard users.</p>
+<h3 id='flat-files'>Flat Files</h3>
+<p>Flat files are used when alerting requirements are batch mode.
+Data is collected and formatted on client side for a specific amount of time and sent over as a flat file to Solidus Labs.
+Solidus Labs systems watch for the file from client, process the data and generate alerts for the Dashboard users.</p>
+<h3 id='fix-api'>FIX API</h3>
+<p>Setup a FIX engine of your side with SenderCompID and TargetCompID as agreed with Solidus Team.
+Convert order and execution data in FIX 4.4 format and send it through the FIX engine.</p>
+<h1 id='rest-api-2'>Rest API</h1><h2 id='exchanges'>Exchanges</h2>
+<blockquote>
+<p>REST API Call Example for Exchanges:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># New Order</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+curl <span class="nt">-X</span> POST
+<span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+<span class="nt">--header</span> <span class="s1">'X-Auth-Token: YourTokenHere'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-d</span> <span class="s1">'{
+ "Account": "cd64368c-3283-40c0-bccb-585b779bba5a",
+ "AvgPx": "0",
+ "ClientId": "999010573",
+ "OriginationFirm": "401",
+ "OriginationTrader": "999010573",
+ "CumQty": "0",
+ "DeskId": "D19735",
+ "ExpireDateTime": "20190602-00:00:00",
+ "Id": "28561684",
+ "LeavesQty": "5",
+ "OrderCapacity": "Proprietary",
+ "OrderQty": "5",
+ "OrdStatus": "New",
+ "OrdType": "Market",
+ "OrigClOrdID": "28561684",
+ "Price": "8556.94",
+ "PriceType": "Price",
+ "Side": "Sell",
+ "Symbol": "BTC/USD",
+ "Text": "Text",
+ "TimeInForce": "Day",
+ "TransactTime": "20190601-00:00:01.427618005",
+ "Version": 1
+}'</span> https://auth.region.environment.soliduslabs.com/api/v1/orderevents
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Partial Fill</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
+curl <span class="nt">-X</span> POST
+<span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+<span class="nt">--header</span> <span class="s1">'X-Auth-Token: YourTokenHere'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-d</span> <span class="s1">'{
+ "Account": "cd64368c-3283-40c0-bccb-585b779bba5a",
+ "AvgPx": "8556.94",
+ "ClientId": "999010573",
+ "OriginationFirm": "401",
+ "OriginationTrader": "999010573",
+ "CumQty": "1",
+ "DeskId": "D19735",
+ "ExpireDateTime": "20190602-00:00:00",
+ "Id": "28561684",
+ "LeavesQty": "4",
+ "OrderCapacity": "Proprietary",
+ "OrderQty": "5",
+ "OrdStatus": "PartiallyFilled",
+ "OrdType": "Market",
+ "OrigClOrdID": "28561684",
+ "Price": "8556.94",
+ "PriceType": "Price",
+ "Side": "Sell",
+ "Symbol": "BTC/USD",
+ "Text": "Text",
+ "TimeInForce": "Day",
+ "TransactTime": "20190601-00:00:01.427618005",
+ "Version": 1
+}'</span> https://auth.region.environment.soliduslabs.com/api/v1/orderevents
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Cancel</span>
+
+curl <span class="nt">-X</span> POST
+<span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+<span class="nt">--header</span> <span class="s1">'X-Auth-Token: YourTokenHere'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-d</span> <span class="s1">'{
+ "Account": "cd64368c-3283-40c0-bccb-585b779bba5a",
+ "AvgPx": "8556.94",
+ "ClientId": "999010573",
+ "OriginationFirm": "401",
+ "OriginationTrader": "999010573",
+ "CumQty": "1",
+ "DeskId": "D19735",
+ "ExpireDateTime": "20190602-00:00:00",
+ "Id": "28561684",
+ "LeavesQty": "4",
+ "OrderCapacity": "Proprietary",
+ "OrderQty": "5",
+ "OrdStatus": "Canceled",
+ "OrdType": "Market",
+ "OrigClOrdID": "28561684",
+ "Price": "8556.94",
+ "PriceType": "Price",
+ "Side": "Sell",
+ "Symbol": "BTC/USD",
+ "Text": "Text",
+ "TimeInForce": "Day",
+ "TransactTime": "20190601-00:00:01.427618005",
+ "Version": 1
+}'</span> https://auth.region.environment.soliduslabs.com/api/v1/orderevents
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Execution</span>
+
+curl <span class="nt">-X</span> POST
+<span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+<span class="nt">--header</span> <span class="s1">'X-Auth-Token: YourTokenHere'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-d</span> <span class="s1">'{
+ "Id": "94945",
+ "LastLiquidityInd": "RemovedLiquidity",
+ "LastMkt": "GS",
+ "MatchingOrderID": "28561690",
+ "OrderID": "28561684",
+ "Price": "8556.94",
+ "Quantity": "1",
+ "Status": "New",
+ "TimeStamp": "20190601-00:00:01.427618005",
+ "Version": 1
+}'</span> https://auth.region.environment.soliduslabs.com/api/v1/tradeevents
 </code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
 
 <span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div>
+<p>Credentials are required to authenticate before you can send messages using the REST API</p>
+
+<ol>
+<li>Speak with your Solidus representative to receive an credentials for real time data transfer account</li>
+<li>Authenticate user to receive a security token</li>
+<li>Use a security token with each REST call. All requests will be directed to HTTPS endpoint</li>
+</ol>
+
+<p>Quick Notes:</p>
+
+<ul>
+<li>All requests must be sent to https://auth.region.environment.soliduslabs.com/api/v1</li>
+<li>Non-HTTPS requests will be redirected to HTTPS, possibly causing functional or performance issues with your application</li>
+<li>All REST requests will result in a 200 Ok response unless there is a server or infrastructure error. The API result will be wrapped in a JSON Result object.</li>
+<li>400 BAD_REQUEST - INVALID_FORMAT (with explanation: item number and relevant fields)</li>
+<li>400 BAD_REQUEST - INVALID_VALUES (with explanation: for example: timestamp exists in the future)</li>
+<li>403 FORBIDDEN - user does not have permission to manage rest ingestion</li>
+<li>409 CONFLICT - transaction id already exists in the system</li>
+</ul>
+<h2 id='broker-dealers-market-makers-hedge-funds'>Broker Dealers, Market Makers, Hedge Funds</h2>
+<blockquote>
+<p>REST API Call Example for Broker Dealers, Market Makers, Hedge Funds:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># New Order</span>
+
+curl <span class="nt">-X</span> POST
+<span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+<span class="nt">--header</span> <span class="s1">'X-Auth-Token: YourTokenHere'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-d</span> <span class="s1">'{
+ "Account": "cd64368c-3283-40c0-bccb-585b779bba5a",
+ "AvgPx": "0",
+ "ClientId": "999010573",
+ "ContraBroker": "401",
+ "ContraTrader": "999010573",
+ "CumQty": "0",
+ "DeskId": "D19735",
+ "ExpireDateTime": "20190602-00:00:00",
+ "Id": "28561684",
+ "LeavesQty": "5",
+ "OrderCapacity": "Proprietary",
+ "OrderQty": "5",
+ "OrdStatus": "New",
+ "OrdType": "Market",
+ "OrigClOrdID": "28561684",
+ "Price": "8556.94",
+ "PriceType": "Price",
+ "Side": "Sell",
+ "Symbol": "BTC/USD",
+ "Text": "Text",
+ "TimeInForce": "Day",
+ "TransactTime": "20190601-00:00:01.427618005",
+ "Version": 1
+}'</span> https://auth.region.environment.soliduslabs.com/api/v1/orderevents
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Partial Fill</span>
+
+curl <span class="nt">-X</span> POST
+<span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+<span class="nt">--header</span> <span class="s1">'X-Auth-Token: YourTokenHere'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-d</span> <span class="s1">'{
+ "Account": "cd64368c-3283-40c0-bccb-585b779bba5a",
+ "AvgPx": "0",
+ "ClientId": "999010573",
+ "ContraBroker": "401",
+ "ContraTrader": "999010573",
+ "CumQty": "0",
+ "DeskId": "D19735",
+ "ExpireDateTime": "20190602-00:00:00",
+ "Id": "28561684",
+ "LeavesQty": "5",
+ "OrderCapacity": "Proprietary",
+ "OrderQty": "5",
+ "OrdStatus": "New",
+ "OrdType": "Market",
+ "OrigClOrdID": "28561684",
+ "Price": "8556.94",
+ "PriceType": "Price",
+ "Side": "Sell",
+ "Symbol": "BTC/USD",
+ "Text": "Text",
+ "TimeInForce": "Day",
+ "TransactTime": "20190601-00:00:01.427618005",
+ "Version": 1
+}'</span> https://auth.region.environment.soliduslabs.com/api/v1/orderevents
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Cancel</span>
+
+curl <span class="nt">-X</span> POST
+<span class="nt">--header</span> <span class="s1">'Accept: application/json'</span>
+<span class="nt">--header</span> <span class="s1">'X-Auth-Token: YourTokenHere'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-d</span> <span class="s1">'{
+ "Account": "cd64368c-3283-40c0-bccb-585b779bba5a",
+ "AvgPx": "0",
+ "ClientId": "999010573",
+ "ContraBroker": "401",
+ "ContraTrader": "999010573",
+ "CumQty": "0",
+ "DeskId": "D19735",
+ "ExpireDateTime": "20190602-00:00:00",
+ "Id": "28561684",
+ "LeavesQty": "5",
+ "OrderCapacity": "Proprietary",
+ "OrderQty": "5",
+ "OrdStatus": "New",
+ "OrdType": "Market",
+ "OrigClOrdID": "28561684",
+ "Price": "8556.94",
+ "PriceType": "Price",
+ "Side": "Sell",
+ "Symbol": "BTC/USD",
+ "Text": "Text",
+ "TimeInForce": "Day",
+ "TransactTime": "20190601-00:00:01.427618005",
+ "Version": 1
+}'</span> https://auth.region.environment.soliduslabs.com/api/v1/orderevents
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># Execution</span>
+
+curl <span class="nt">-X</span> POST 
+<span class="nt">--header</span> <span class="s1">'Accept: application/json'</span> 
+<span class="nt">--header</span> <span class="s1">'X-Auth-Token: YourTokenHere'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: application/json'</span> <span class="nt">-d</span> <span class="s1">'{  
+  "Id": "94945", 
+  "LastLiquidityInd": "RemovedLiquidity", 
+  "LastMkt": "GS", 
+  "MatchingOrderID": "28561690", 
+  "OrderID": "28561684", 
+  "Price": "8556.94", 
+  "Quantity": "1", 
+  "Status": "New", 
+  "TimeStamp": "20190601-00:00:01.427618005", 
+  "Version": 1
+  }'</span> https://api-developers.soliduslabs.com/api/v1/tradeevents
+</code></pre></div><h1 id='flat-files-2'>Flat Files</h1>
+<blockquote>
+<p>Examples of flat files for exchanges</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c">#New Order</span>
+
+TransactTime,Id,Version,Symbol,Side,OrderQty,Price,PriceType,OrdType,OrdStatus,AvgPx,CumQty,LeavesQty,TimeInForce,ExpireDateTime,OrderCapacity,Account,ClientId,OriginationFirm,OriginationTrader,DeskId,OrigClOrdID,Text
+1600361061141,28561684,1,BTC/USD,Sell,2.1,8556.94,PerUnit,Limit,New,0,0,2.1,GoodTillCancel,,Agency,585b779bba5a,999010573,401,999010573,D19735,28561684,
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c">#Partial Fill</span>
+
+TransactTime,Id,Version,Symbol,Side,OrderQty,Price,PriceType,OrdType,OrdStatus,AvgPx,CumQty,LeavesQty,TimeInForce,ExpireDateTime,OrderCapacity,Account,ClientId,OriginationFirm,OriginationTrader,DeskId,OrigClOrdID,Text
+
+1600361071141,28561684,2,BTC/USD,Sell,2.1,8556.94,PerUnit,Limit,PartiallyFilled,8556.94,1.5,0.6,GoodTillCancel,,Agency,585b779bba5a,999010573,401,999010573,D19735,28561684,
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c">#Cancel</span>
+
+TransactTime,Id,Version,Symbol,Side,OrderQty,Price,PriceType,OrdType,OrdStatus,AvgPx,CumQty,LeavesQty,TimeInForce,ExpireDateTime,OrderCapacity,Account,ClientId,OriginationFirm,OriginationTrader,DeskId,OrigClOrdID,Text
+‍
+1600361081141,28561684,3,BTC/USD,Sell,2.1,8556.94,PerUnit,Limit,Canceled,8556.94,1.5,0,GoodTillCancel,,Agency,585b779bba5a,999010573,401,999010573,D19735,28561684,
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c">#Execution Record</span>
+
+TransactTime,Id,Version,OrderID,MatchingOrderID,Quantity,Price,Status,LastMkt,LastLiquidityInd
+1600361071141,94945,1,28561684,28561690,1.5,8556.94,Accepted,TestExchange,RemovedLiquidity
+</code></pre></div>
+<p>Sending flat files is a way to get started quickly with data integration with Solidus Labs.  Order and execution data is collected and formatted in the specific schema. All order events related to trading activity are collected for market surveillance algorithms.</p>
+
+<p>File Structure:
+Uploaded data-files should include the following elements:</p>
+<h3 id='header-row'>Header Row</h3>
+<p>Like most CSV files, the first header should include field names according to the sent schema:</p>
+
+<p>Sending flat files is a way to get started quickly with data integration with Solidus Labs.  Order and execution data is collected and formatted in the specific schema. All order events related to trading activity are collected for market surveillance algorithms.</p>
+
+<p><strong>Order header row:</strong></p>
+
+<p><code>TransactTime,Id,Version,Symbol,Side,OrderQty,Price,PriceType,OrdType,OrdStatus,AvgPx,CumQty,LeavesQty,TimeInForce,ExpireDateTime,OrderCapacity,Account,ClientId,OriginationFirm,OriginationTrader,DeskId,OrigClOrdID,Text</code></p>
+
+<p><strong>Execution header row:</strong></p>
+
+<p><code>TransactTime,Id,Version,OrderID,MatchingOrderID,Quantity,Price,Status,LastMkt,LastLiquidityInd</code></p>
+<h3 id='data-tuples'>Data Tuples</h3>
+<p>This is where the actual data comes in, in comma-separated values.</p>
+
+<p>Example of an order:</p>
+
+<p><code>TransactTime,Id,Version,OrderID,MatchingOrderID,Quantity,Price,Status,LastMkt,LastLiquidityInd</code></p>
+<h3 id='how-to-uplaod-files'>How to uplaod files:</h3>
+<p>‍In order to upload a file, you will need to follow these steps:</p>
+
+<ul>
+<li>Speak to your Solidus Labs representative in order to get the credentials required to use our system.</li>
+<li><p>Login to our system in order to receive a temporary security-token which will enable you to use our API. Login can be achieved using cURL:</p>
+
+<p><code>curl --request POST &#39;https://auth.region.environment.soliduslabs.com/api/v1/auth/login&#39; --header &#39;Content-Type: application/json&#39; --header &#39;Content-Type: text/plain&#39; --data-raw &#39;{&quot;email&quot;: &quot;your@email.here&quot;, &quot;password&quot;: &quot;yourPasswordHere&quot; }&#39;</code></p></li>
+<li><p>Use our API to issue a secure link that will allow you to upload your data-file to an internal folder within our system. From there, our processes will periodically scan your workspace in search of new files to process:</p>
+
+<p><code>curl --request POST  &#39;https://auth.region.environment.soliduslabs.com/api/v1/issue-upload-url&#39; \ --header &#39;Content-Type: application/json&#39; \ --header &#39;X-Auth-Token: your-issued-security-token&#39; \ --header &#39;Content-Type: application/json&#39; \ --data-raw &#39;{ &quot;fileName&quot;: &quot;your_filename.csv&quot;, &quot;fileType&quot;: &quot;private_order&quot; }&#39;</code></p>
+
+<p>Possible “fileTypes” are:<br><code>private_order</code><br><code>Private_execution</code>
+‍</p></li>
+<li><p>Last stretch - we can now use the link that we received in order to upload our file to Solidus Labs.
+Please refrain from accidentally uploading different files using the same link, as the link is tied to a specific file-path, and uploading different files from it will only serve to overwrite your files.</p>
+
+<p><code>curl --request PUT &#39;your-issued-url-here&#39; \ --header &#39;Content-Type: application/x-www-form-urlencoded&#39; \ --header &#39;Content-Type: text/csv&#39; \ --data-binary &#39;@/local/path/to/your/data/file.csv&#39;</code></p></li>
+</ul>
+<h3 id='checking-file-status'>Checking file status:</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>
+curl <span class="nt">--request</span> GET <span class="s1">'https://auth.region.environment.soliduslabs.com/api/v1/list-files'</span>
+<span class="nt">--header</span> <span class="s1">'Content-Type: application/json'</span>
+<span class="nt">--header</span> <span class="s1">'X-Auth-Token:  your-issued-security-token'</span>
+</code></pre></div>
+<p>Checking up on your previously uploaded files and their processing status can be achieved by another endpoint in our API: </p>
+
+<p><code>curl --request GET &#39;https://auth.region.environment.soliduslabs.com/api/v1/list-files&#39; --header &#39;Content-Type: application/json&#39; --header &#39;X-Auth-Token:  your-issued-security-token&#39;</code></p>
+<h1 id='fix-4-4'>FIX 4.4</h1>
+<blockquote>
+<p>FIX 4.4 Call examples for exchanges</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c"># New Order</span>
+
+<span class="nv">8</span><span class="o">=</span>FIX.4.4|9<span class="o">=</span>293|35<span class="o">=</span>D|34<span class="o">=</span>22|49<span class="o">=</span>CLIENT|52<span class="o">=</span>20190601-00:00:02.427618005|56<span class="o">=</span>SOLIDUS|1<span class="o">=</span>cd64368c-3283-40c0-bccb-585b779bba5a|6<span class="o">=</span>0|14<span class="o">=</span>0|432<span class="o">=</span>20190602-00:00:00|11<span class="o">=</span>28561684|151<span class="o">=</span>5|528<span class="o">=</span>G|38<span class="o">=</span>5|40<span class="o">=</span>2|41<span class="o">=</span>28561684|44<span class="o">=</span>8556.94|54<span class="o">=</span>2|55<span class="o">=</span>BTC/USD|58<span class="o">=</span>Text|59<span class="o">=</span>1|60<span class="o">=</span>20190601-00:00:01.427618005|453<span class="o">=</span>3|448<span class="o">=</span>999010573|447<span class="o">=</span>D|452<span class="o">=</span>3|448<span class="o">=</span>T100001|447<span class="o">=</span>D|452<span class="o">=</span>11|448<span class="o">=</span>DBCA|447<span class="o">=</span>D|452<span class="o">=</span>13|10<span class="o">=</span>222|
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c"># Cancel Request</span>
+
+<span class="nv">8</span><span class="o">=</span>FIX.4.4|9<span class="o">=</span>298|35<span class="o">=</span>F|34<span class="o">=</span>123|49<span class="o">=</span>CLIENT|52<span class="o">=</span>20190601 00:00:04.001613021|56<span class="o">=</span>SOLIDUS|1<span class="o">=</span>cd64368c-3283-40c0-bccb-585b779bba5a|6<span class="o">=</span>8556.94|14<span class="o">=</span>1|432<span class="o">=</span>20190602-00:00:00|11<span class="o">=</span>28561684|151<span class="o">=</span>4|528<span class="o">=</span>G|38<span class="o">=</span>5|40<span class="o">=</span>1|41<span class="o">=</span>28561684|44<span class="o">=</span>8556.94|54<span class="o">=</span>2|55<span class="o">=</span>BTC/USD|58<span class="o">=</span>Text|59<span class="o">=</span>1|60<span class="o">=</span>20190601-00:00:02.798615123|453<span class="o">=</span>3|448<span class="o">=</span>999010573|447<span class="o">=</span>D|452<span class="o">=</span>3|448<span class="o">=</span>T100001|447<span class="o">=</span>D|452<span class="o">=</span>11|448<span class="o">=</span>DBCA|447<span class="o">=</span>D|452<span class="o">=</span>13|10<span class="o">=</span>091|
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c"># Partial Fill</span>
+
+<span class="nv">8</span><span class="o">=</span>FIX.4.4|9<span class="o">=</span>293|35<span class="o">=</span>D|34<span class="o">=</span>22|49<span class="o">=</span>CLIENT|52<span class="o">=</span>20190601-00:00:02.427618005|56<span class="o">=</span>SOLIDUS|1<span class="o">=</span>cd64368c-3283-40c0-bccb-585b779bba5a|6<span class="o">=</span>0|14<span class="o">=</span>0|432<span class="o">=</span>20190602-00:00:00|11<span class="o">=</span>28561684|151<span class="o">=</span>5|528<span class="o">=</span>G|38<span class="o">=</span>5|40<span class="o">=</span>2|41<span class="o">=</span>28561684|44<span class="o">=</span>8556.94|54<span class="o">=</span>2|55<span class="o">=</span>BTC/USD|58<span class="o">=</span>Text|59<span class="o">=</span>1|60<span class="o">=</span>20190601-00:00:01.427618005|453<span class="o">=</span>3|448<span class="o">=</span>999010573|447<span class="o">=</span>D|452<span class="o">=</span>3|448<span class="o">=</span>T100001|447<span class="o">=</span>D|452<span class="o">=</span>11|448<span class="o">=</span>DBCA|447<span class="o">=</span>D|452<span class="o">=</span>13|10<span class="o">=</span>222|
+
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>FIX 4.4 Call examples for broker dealers, market makers, hedge funds</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c"># New Order</span>
+
+<span class="nv">8</span><span class="o">=</span>FIX.4.4|9<span class="o">=</span>293|35<span class="o">=</span>D|34<span class="o">=</span>22|49<span class="o">=</span>CLIENT|52<span class="o">=</span>20190601-00:00:02.427618005|56<span class="o">=</span>SOLIDUS|1<span class="o">=</span>cd64368c-3283-40c0-bccb-585b779bba5a|6<span class="o">=</span>0|14<span class="o">=</span>0|432<span class="o">=</span>20190602-00:00:00|11<span class="o">=</span>28561684|151<span class="o">=</span>5|528<span class="o">=</span>G|38<span class="o">=</span>5|40<span class="o">=</span>2|41<span class="o">=</span>28561684|44<span class="o">=</span>8556.94|54<span class="o">=</span>2|55<span class="o">=</span>BTC/USD|58<span class="o">=</span>Text|59<span class="o">=</span>1|60<span class="o">=</span>20190601-00:00:01.427618005|453<span class="o">=</span>3|448<span class="o">=</span>999010573|447<span class="o">=</span>D|452<span class="o">=</span>3|448<span class="o">=</span>T100001|447<span class="o">=</span>D|452<span class="o">=</span>11|448<span class="o">=</span>DBCA|447<span class="o">=</span>D|452<span class="o">=</span>13|10<span class="o">=</span>222|
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c"># Cancel Request</span>
+
+<span class="nv">8</span><span class="o">=</span>FIX.4.4|9<span class="o">=</span>293|35<span class="o">=</span>D|34<span class="o">=</span>22|49<span class="o">=</span>CLIENT|52<span class="o">=</span>20190601-00:00:02.427618005|56<span class="o">=</span>SOLIDUS|1<span class="o">=</span>cd64368c-3283-40c0-bccb-585b779bba5a|6<span class="o">=</span>0|14<span class="o">=</span>0|432<span class="o">=</span>20190602-00:00:00|11<span class="o">=</span>28561684|151<span class="o">=</span>5|528<span class="o">=</span>G|38<span class="o">=</span>5|40<span class="o">=</span>2|41<span class="o">=</span>28561684|44<span class="o">=</span>8556.94|54<span class="o">=</span>2|55<span class="o">=</span>BTC/USD|58<span class="o">=</span>Text|59<span class="o">=</span>1|60<span class="o">=</span>20190601-00:00:01.427618005|453<span class="o">=</span>3|448<span class="o">=</span>999010573|447<span class="o">=</span>D|452<span class="o">=</span>3|448<span class="o">=</span>T100001|447<span class="o">=</span>D|452<span class="o">=</span>11|448<span class="o">=</span>DBCA|447<span class="o">=</span>D|452<span class="o">=</span>13|10<span class="o">=</span>222|
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c"># Partial Fill</span>
+
+<span class="nv">8</span><span class="o">=</span>FIX.4.4|9<span class="o">=</span>297|35<span class="o">=</span>8|34<span class="o">=</span>56|49<span class="o">=</span>CLIENT|52<span class="o">=</span>20190601-00:00:03.117612011|56<span class="o">=</span>SOLIDUS|1<span class="o">=</span>cd64368c-3283-40c0-bccb-585b779bba5a|6<span class="o">=</span>8556.94|14<span class="o">=</span>1|432<span class="o">=</span>20190602-00:00:00|5300<span class="o">=</span>28561690|37<span class="o">=</span>28561684|17<span class="o">=</span>94945|30<span class="o">=</span>GS|151<span class="o">=</span>4|528<span class="o">=</span>G|38<span class="o">=</span>5|39<span class="o">=</span>1|40<span class="o">=</span>1|41<span class="o">=</span>28561684|44<span class="o">=</span>8556.94|54<span class="o">=</span>2|55<span class="o">=</span>BTC/USD|58<span class="o">=</span>Text|59<span class="o">=</span>1|60<span class="o">=</span>20190601-00:00:02.123615001|851<span class="o">=</span>2|453<span class="o">=</span>3|448<span class="o">=</span>999010573|447<span class="o">=</span>D|452<span class="o">=</span>3|448<span class="o">=</span>T100001|447<span class="o">=</span>D|452<span class="o">=</span>11|448<span class="o">=</span>DBCA|447<span class="o">=</span>D|452<span class="o">=</span>13|10<span class="o">=</span>026|
+</code></pre></div>
+<p>An API Key is required to authenticate before you can send messages using FIX Engine</p>
+
+<ul>
+<li>Clients will have TCP connection setup to send messages and heartbeats.</li>
+<li>All FIX requests will result in a Heartbeat incrementing the sequence number on the message.</li>
+</ul>
+<h1 id='transaction-monitoring'>Transaction Monitoring</h1>
+<blockquote>
+<p>Example transaction file</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>
+<span class="c"># New Order</span>
+
+Id,Version,TransactTime,ActorId,ExternalAccountId,AccountType,AccountFunction,InternalAccountId,Currency,Quantity,Type,Status,TransactionHash
+fb8078a4839f,1,1605493727,act445,0xe5efbdcd9ee2178779cec66150fdb3d0e537eeb7,CRYPTO,TRADING,0x82461e670c212099a9c70e68420a50559a235fdd,ETH,2.23,DEPOSIT,APPROVED,0x5213bd89742634331ea864c3bc75bc78607d50e55828fb8078a4839f942b583e
+</code></pre></div>
+<p>Data requirement from clients differ based on the type of client entity. Following are the different applicable data formats applicable for files and REST.</p>
+<h2 id='transactions'>Transactions</h2>
 <aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+Field names marked with a * are mandatory fields
 </aside>
-
-<p>The Kittn API uses the following error codes:</p>
 
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Field Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>*<code>Id</code></td>
+<td><code>String</code></td>
+<td>Unique Transaction identifier</td>
+<td></td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>*<code>ActorId</code></td>
+<td><code>String</code></td>
+<td>Transaction Creator Identifier</td>
+<td></td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>*<code>ExternalAccountId</code></td>
+<td><code>String</code></td>
+<td>Digital wallet or bank account. This is the external account related to the ActorId</td>
+<td></td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>*<code>Currency</code></td>
+<td><code>String</code></td>
+<td>Currency symbol. Ex: BTC, USD</td>
+<td></td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>*<code>Quantity</code></td>
+<td><code>float</code></td>
+<td>Total units currency</td>
+<td></td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>*<code>Type</code></td>
+<td><code>String</code></td>
+<td></td>
+<td>DEPOSIT,<br>WITHDRAWAL</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
+<td>*<code>Status</code></td>
+<td><code>String</code></td>
+<td></td>
+<td>PENDING,<br>ACCEPTED,<br>REJECTED</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<td>*<code>TransactTime</code></td>
+<td><code>UTCTimestamp</code></td>
+<td>Time of transaction</td>
+<td></td>
 </tr>
 <tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td><code>Version</code></td>
+<td><code>Integer</code></td>
+<td>Version of the transaction</td>
+<td></td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td><code>InternalAccountId</code></td>
+<td><code>String</code></td>
+<td>Internal account owned by the Solidus client. Digital wallet or bank acocunt.</td>
+<td></td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td><code>TransactionHash</code></td>
+<td><code>String</code></td>
+<td>Blockchain transaction hash. Optional for cash txn.</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>ExternalAccountType</code></td>
+<td><code>String</code></td>
+<td>Type of account (ENUM = FIAT, CRYPTO)</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>ExternalAccountFunction</code></td>
+<td><code>String</code></td>
+<td>Intended function of the account if available (ENUM = DEPOSIT, TRADING, HEDGING)</td>
+<td></td>
 </tr>
 </tbody></table>
+<h2 id='user-profile'>User Profile</h2>
+<table><thead>
+<tr>
+<th>Field Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*<code>Created</code></td>
+<td><code>String</code></td>
+<td>Time at which profile was created</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>CreatedBy</code></td>
+<td><code>String</code></td>
+<td>User id creating the profile</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>LastUpdated</code></td>
+<td><code>String</code></td>
+<td>Time at which profile was updated last</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>LastUpdatedBy</code></td>
+<td><code>String</code></td>
+<td>User id updating the profile</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Version</code></td>
+<td><code>int</code></td>
+<td>Version of the profile</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>UserID</code></td>
+<td><code>String</code></td>
+<td>User id for the profile</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Country</code></td>
+<td><code>String</code></td>
+<td>Country of residence.</td>
+<td>USA</td>
+</tr>
+<tr>
+<td>*<code>IpAddress</code></td>
+<td><code>String</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Nationality</code></td>
+<td><code>String</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>SourceOfFunds</code></td>
+<td><code>list</code></td>
+<td></td>
+<td>[&quot;SAVINGS&quot;,&quot;INVESTMENTS&quot;]</td>
+</tr>
+<tr>
+<td>*<code>AnnualIncome</code></td>
+<td><code>String</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>AccountPurpose</code></td>
+<td><code>list</code></td>
+<td></td>
+<td>[&quot;LONG_TERM&quot;,&quot;DAY_TRADING&quot;]</td>
+</tr>
+<tr>
+<td>*<code>TradingFrequency</code></td>
+<td><code>String</code></td>
+<td>Trading frequency for the profile</td>
+<td>DAILY,WEEKLY,..</td>
+</tr>
+<tr>
+<td>*<code>AverageTradeSize</code></td>
+<td><code>String</code></td>
+<td>Trading size for the profile</td>
+<td>UNDER_10K,10K-50K,..</td>
+</tr>
+<tr>
+<td>*<code>LiquidNetWorth</code></td>
+<td><code>String</code></td>
+<td>Time at which profile was created</td>
+<td>UNDER_100K,100K_500K,..</td>
+</tr>
+<tr>
+<td>*<code>AffiliatedAccounts</code></td>
+<td><code>list</code></td>
+<td>Time at which profile was created</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>KycProvider</code></td>
+<td><code>String</code></td>
+<td>Time at which profile was created</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>KycRiskScore</code></td>
+<td><code>float</code></td>
+<td>Time at which profile was created</td>
+<td>0, 1, 2</td>
+</tr>
+<tr>
+<td>*<code>KycStatus</code></td>
+<td><code>String</code></td>
+<td>Time at which profile was created</td>
+<td>PASSED</td>
+</tr>
+</tbody></table>
+<h2 id='institutional-profile'>Institutional Profile</h2>
+<table><thead>
+<tr>
+<th>Field Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>*<code>Created</code></td>
+<td><code>UTCTimestamp</code></td>
+<td>Time at which profile was created</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>CreatedBy</code></td>
+<td><code>String</code></td>
+<td>user id creating the profile</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>LastUpdated</code></td>
+<td><code>UTCTimestamp</code></td>
+<td>Time at which profile was updated last</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>LastUpdatedBy</code></td>
+<td><code>String</code></td>
+<td>user id updating the profile</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Version</code></td>
+<td><code>int</code></td>
+<td>Version of the profile</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>UserID</code></td>
+<td><code>String</code></td>
+<td>User id for the profile</td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>Country</code></td>
+<td><code>String</code></td>
+<td>Country of residence.</td>
+<td>USA, HKG</td>
+</tr>
+<tr>
+<td>*<code>IpAddress</code></td>
+<td><code>String</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>CountryOfIncorporation</code></td>
+<td><code>String</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>BusinessType</code></td>
+<td><code>String</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>KybRiskScore</code></td>
+<td><code>String</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>TradingPurpose</code></td>
+<td><code>String</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>SourceOfFunds</code></td>
+<td><code>String</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>*<code>TradingFrequency</code></td>
+<td><code>String</code></td>
+<td></td>
+<td>DAILY,WEEKLY,..</td>
+</tr>
+<tr>
+<td>*<code>AverageTradeSize</code></td>
+<td><code>String</code></td>
+<td></td>
+<td>50K_250K,250K_500K,..</td>
+</tr>
+<tr>
+<td>*<code>AffiliatedAccounts</code></td>
+<td><code>list</code></td>
+<td>Time at which profile was created</td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id='faq'>FAQ</h1><h2 id='data'>Data</h2>
+<p><strong>Do I need to send PII data for Solidus Labs algorithms to work?</strong></p>
+
+<p>No. Solidus Labs algorithms do not require PII.</p>
+
+<p><strong>Do I need to anonymize data before sending to Solidus Labs?</strong></p>
+
+<p>Yes, please anonymize the data by removing all sensitive information from it, such as PII.
+‍
+<strong>How can I ensure that the data is anonymized?</strong></p>
+
+<p>The easiest way to only provide the data as per data requirement section above.</p>
+
+<p><strong>What is the best practice of collecting the data on my end?</strong></p>
+
+<p>It depends on the system architecture of data storage of clients&#39; end. If the data is stored in a database, one of the best approaches would be to define a stored procedure or a function to extract the data. Then call scored procedure from a script to fetch the data for the required time period. This data can be formatted using a scripting or a programming language. For batch alerting, the data is collected in a file. For near real time alerting, the data is converted to JSON formatted and sent via REST API to Solidus Labs. For real time alerting, a messaging bus such as Kafka can be used as a channel for getting the data directly from the order management system.</p>
+
+<p><strong>What is the fastest way to get my data integration setup?</strong></p>
+
+<p>Flat files are the easiest interface to get up and running with the data integration. After the data is collected and formatted on clients&#39; side, it takes a couple of commands to send the file over. See flat files sections for details.</p>
+
+<p><strong>Is there a Solidus Labs QA environment where I can test my data transfer mechanism?</strong></p>
+
+<p>Yes. You should test the data transmission setup and get the fields checked with Solidus Labs onboarding team before turning on the data flow in production.</p>
+<h2 id='rest-api-3'>REST API</h2>
+<p><strong>Is there a rate limit for REST API?</strong></p>
+
+<p>Yes. There is an upper limit of 120 messages per minute.</p>
+
+<p><strong>What happens if I exceed REST API rate limit?</strong></p>
+
+<p>Rest API calls will fail with response 429 in the status code.</p>
+
+<p><strong>What is the expected data format for REST API requests?</strong></p>
+
+<p>JSON. Please see REST API section for details and examples.
+‍</p>
+<h2 id='flat-files-3'>Flat Files</h2>
+<p><strong>Is there a size limit on the file?</strong></p>
+
+<p>Yes, the upper limit for a single file is 5GB. The file can be broken into multiple files with individual sizes less than the upper limit.</p>
+
+<p><strong>What happens if I try to upload a file bigger that 5GB in a single command?</strong></p>
+
+<p>Request will fail with the message file too large.</p>
+
+<p><strong>How often should I send the data via files?</strong></p>
+
+<p>File transfer frequency depends on client alerting needs. Typically the file transfer frequency ranges from a few hours to a few days.</p>
+
+<p><strong>Do i need to schedule the files to be sent at the same time?</strong></p>
+
+<p>No. Solidus Labs watches for the files from the client continuously. So the file will be processed when it is received. However it is a good practice to use a scheduler to send files around the same time to support timely deliver of alerts to the compliance team. Examples of such schedulers are Autosys or Unix cron.</p>
+
+<p><strong>How can I report an issue with data transmission?</strong></p>
+
+<p>Please drop an email with issue description to apisupport@soliduslabs.com</p>
+
+<p><strong>Is there a public API for Solidus?</strong></p>
+
+<p>No, Solidus product is available to paid customer only. Please reach out at hello@soliduslabs.com to learn more about Solidus compliance product suite.</p>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
