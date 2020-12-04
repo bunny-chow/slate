@@ -23,19 +23,19 @@ under the License.
 
 // BACKGROUND COLORS
 ////////////////////
-$nav-bg: #2E3336 !default;
+$nav-bg: #202020 !default;
 $examples-bg: #2E3336 !default;
 $code-bg: #1E2224 !default;
 $code-annotation-bg: #191D1F !default;
-$nav-subitem-bg: #1E2224 !default;
+$nav-subitem-bg: #000000 !default;
 $nav-active-bg: #FFCD26 !default;
 $nav-active-parent-bg: #1E2224 !default; // parent links of the current section
 $lang-select-border: #000 !default;
 $lang-select-bg: #1E2224 !default;
 $lang-select-active-bg: $examples-bg !default; // feel free to change this to blue or something
 $lang-select-pressed-bg: #111 !default; // color of language tab bg when mouse is pressed
-$main-bg: #F3F7F9 !default;
-$aside-notice-bg: #8fbcd4 !default;
+$main-bg: #f9f8f4 !default;
+$aside-notice-bg: #ffecad !default;
 $aside-warning-bg: #c97a7e !default;
 $aside-success-bg: #6ac174 !default;
 $search-notice-bg: #c97a7e !default;
@@ -76,7 +76,7 @@ $phone-width: $tablet-width - $nav-width !default; // min width before reverting
 
 %header-font {
   @extend %default-font;
-  font-weight: bold;
+  font-weight: medium;
 }
 
 %code-font {

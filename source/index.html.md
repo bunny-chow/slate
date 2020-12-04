@@ -5,7 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - shell
 
 toc_footers:
-  - <a href='#'>Solidus Labs Support</a>
+  - <a href='mailto:apisupport@soliduslabs.com'>Solidus Labs Support</a>
 
 includes:
 
@@ -549,6 +549,8 @@ Field Name | Type | Description | Example
 `TransactionHash` | `String` | Blockchain transaction hash. Optional for cash txn. | 
 *`ExternalAccountType` | `String` | Type of account (ENUM = FIAT, CRYPTO) | 
 *`ExternalAccountFunction` | `String` | Intended function of the account if available (ENUM = DEPOSIT, TRADING, HEDGING) | 
+*`ClientId` | `String` | Unique identifier for the client. For Institutional clients, the clientId represents the top level entity. For retail client it can be the same as ActorId. | 
+
 
 
 ## User Profile
